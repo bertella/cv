@@ -1,75 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Gabriel Bertella - Data Analyst</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #0f172a;
-      color: #e2e8f0;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 5px;
-    }
-    h2 {
-      color: #38bdf8;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-    p {
-      line-height: 1.6;
-    }
-    .subtitle {
-      color: #94a3b8;
-      margin-bottom: 20px;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .tag {
-      display: inline-block;
-      background-color: #1e293b;
-      padding: 5px 10px;
-      border-radius: 6px;
-      margin: 5px 5px 0 0;
-      font-size: 14px;
-    }
-    .project {
-      background-color: #1e293b;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    .header {
-      border-bottom: 1px solid #334155;
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Bertella | Data Analyst</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        .header { text-align: center; padding: 40px 0; background: #2c3e50; color: white; border-radius: 8px; margin-bottom: 20px; }
+        .header h1 { margin: 0; font-size: 2.5em; }
+        .subtitle { font-size: 1.2em; color: #bdc3c7; }
+        .header a { color: #3498db; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { border-bottom: 2px solid #3498db; padding-bottom: 10px; color: #2c3e50; }
+        .project { margin-bottom: 20px; padding: 15px; border-left: 4px solid #3498db; background: #f9f9f9; }
+        .tag { display: inline-block; background: #3498db; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.9em; margin: 5px 2px; }
+        a { color: #3498db; }
+    </style>
 </head>
-
 <body>
-  <div class="container">
 
-```
 <div class="header">
   <h1>Gabriel Bertella</h1>
   <p class="subtitle">Data Analyst | SQL | Power BI | Tableau</p>
-  <p>Córdoba, Argentina | <a href="#">LinkedIn</a> | <a href="#">Email</a></p>
+  <p>Córdoba, Argentina | <a href="TU_LINK_LINKEDIN">LinkedIn</a> | <a href="mailto:tu-email@ejemplo.com">Email</a></p>
 </div>
 
 <div class="section">
@@ -83,7 +36,6 @@
 
 <div class="section">
   <h2>Experiencia</h2>
-
   <div class="project">
     <strong>Ministerio de Salud — Analista Funcional / Datos</strong>
     <p>
@@ -93,7 +45,6 @@
       - Relevamiento de necesidades con usuarios
     </p>
   </div>
-
   <div class="project">
     <strong>Coderhouse — Profesor de Tableau</strong>
     <p>
@@ -102,7 +53,6 @@
       - Acompañamiento a estudiantes
     </p>
   </div>
-
 </div>
 
 <div class="section">
@@ -117,31 +67,22 @@
 
 <div class="section">
   <h2>Proyectos</h2>
-
   <div class="project">
     <strong>Dashboard de Ventas (Power BI)</strong>
-    <p>
-      Análisis de ventas, ticket promedio y evolución temporal. Incluye segmentación por categoría y productos.
-    </p>
+    <p>Análisis de ventas, ticket promedio y evolución temporal. Incluye segmentación por categoría y productos.</p>
     <a href="#">Ver proyecto</a>
   </div>
-
   <div class="project">
     <strong>Análisis de Clientes (SQL)</strong>
-    <p>
-      Identificación de clientes con mayor gasto y análisis comparativo contra promedio utilizando subconsultas.
-    </p>
+    <p>Identificación de clientes con mayor gasto y análisis comparativo contra promedio utilizando subconsultas.</p>
     <a href="#">Ver queries</a>
   </div>
-
 </div>
 
 <div class="section">
   <h2>Formación</h2>
   <p>Tecnicatura en Programación — UTN (en curso)</p>
 </div>
-```
 
-  </div>
 </body>
 </html>
