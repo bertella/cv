@@ -3,473 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Gabriel Bertella</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Data Analyst Senior & AI Developer | Córdoba, Argentina</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Data Analyst Senior & AI-Augmented Developer especializado en transformar datos en decisiones estratégicas y optimización de procesos mediante IA.">
+    <meta name="keywords" content="Data Analyst Córdoba, AI Developer Argentina, Python, SQL, Tableau, Business Intelligence, Machine Learning">
+    <meta name="author" content="Tu Nombre">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+    <!-- Open Graph (WhatsApp / LinkedIn) -->
+    <meta property="og:title" content="Data Analyst Senior & AI Developer | Estrategia & Datos">
+    <meta property="og:description" content="Impulsando negocios mediante el análisis de datos avanzado y soluciones de IA.">
+    <meta property="og:image" content="URL_DE_TU_PREVIEW_IMAGE.jpg">
+    <meta property="og:url" content="https://tu-sitio.com">
 
-        .cv-container {
-            max-width: 950px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.15);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #00d4aa 100%);
-            color: white;
-            padding: 50px 40px;
-            text-align: center;
-            position: relative;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.2)"/><circle cx="80" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-            opacity: 0.4;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .name {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -2px;
-        }
-
-        .title {
-            font-size: 1.4rem;
-            opacity: 0.95;
-            margin-bottom: 25px;
-            font-weight: 400;
-        }
-
-        .contact {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-            font-size: 1.1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: rgba(255,255,255,0.95);
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover {
-            color: #ffd700;
-            transform: translateY(-2px);
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: 1fr 2.2fr;
-            min-height: 900px;
-        }
-
-        .sidebar {
-            background: #f8fafc;
-            padding: 45px 35px;
-            border-right: 1px solid #e2e8f0;
-        }
-
-        .main-content {
-            padding: 50px 60px;
-        }
-
-        .section {
-            margin-bottom: 45px;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .section:nth-child(1) { animation-delay: 0.1s; }
-        .section:nth-child(2) { animation-delay: 0.2s; }
-        .section:nth-child(3) { animation-delay: 0.3s; }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1e3c72;
-            margin-bottom: 25px;
-            padding-bottom: 12px;
-            border-bottom: 4px solid #00d4aa;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #00d4aa, #00b894);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 16px 20px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            border-left: 4px solid #00d4aa;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
-        .skill-icon {
-            width: 28px;
-            height: 28px;
-            color: #00d4aa;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .tool-item {
-            padding: 12px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .tool-item:hover {
-            transform: scale(1.05);
-        }
-
-        .experience-item {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        .job-title {
-            font-weight: 600;
-            color: #1e3c72;
-            font-size: 1.15rem;
-            margin-bottom: 6px;
-        }
-
-        .company {
-            color: #2a5298;
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .period {
-            color: #00d4aa;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .job-desc {
-            color: #4a5568;
-            line-height: 1.75;
-            margin-bottom: 12px;
-        }
-
-        .achievements {
-            padding-left: 20px;
-            margin-top: 12px;
-        }
-
-        .achievements li {
-            color: #4a5568;
-            margin-bottom: 6px;
-            position: relative;
-        }
-
-        .achievements li::before {
-            content: '▸';
-            color: #00d4aa;
-            font-weight: bold;
-            position: absolute;
-            left: -20px;
-        }
-
-        .print-btn {
-            position: fixed;
-            top: 25px;
-            right: 25px;
-            background: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,212,170,0.4);
-            transition: all 0.3s;
-            z-index: 1000;
-        }
-
-        .print-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,212,170,0.5);
-        }
-
-        @media print {
-            body { background: white; padding: 0; }
-            .cv-container { box-shadow: none; max-width: none; }
-            .print-btn { display: none; }
-            .sidebar { border-right: 1px solid #000; }
-        }
-
-        @media (max-width: 768px) {
-            .content { grid-template-columns: 1fr; }
-            .sidebar { border-right: none; border-bottom: 1px solid #e2e8f0; padding: 35px 25px; }
-            .main-content { padding: 35px 25px; }
-            .header { padding: 35px 25px; }
-            .name { font-size: 2.5rem; }
-            .contact { gap: 20px; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="print-btn" onclick="window.print()">
-        <i class="fas fa-download"></i> Descargar PDF
-    </button>
 
-    <div class="cv-container">
-        <!-- HEADER -->
-        <div class="header">
-            <div class="header-content">
-                <h1 class="name">GABRIEL BERTELLA</h1>
-                <p class="title">Ventas | Gestión Comercial | Análisis de Datos | Business Intelligence</p>
-                <div class="contact">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        bertella.galuc@gmail.com
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio.</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#stack">Stack</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="tu-cv.pdf" class="btn-cta" target="_blank">Descargar PDF</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container" id="sobre-mi">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Decisiones impulsadas por Datos e Inteligencia Artificial.</h1>
+                    <p class="subtext">Data Analyst Senior & AI-Augmented Developer. Ayudo a empresas a escalar mediante la transformación de datos brutos en activos estratégicos y la optimización de procesos inteligentes.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/300" alt="Foto Profesional" class="profile-img">
+                </div>
+            </div>
+        </section>
+        
+        <div class="hero-image">
+            <!-- Usamos el atributo 'loading="lazy"' para rendimiento -->
+            <img src="perfil.jpg" alt="Foto Profesional" class="profile-img">
+        </div>
+
+        <!-- Experience Section -->
+        <section class="experience container">
+            <h2 class="section-title">Experiencia Seleccionada</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Senior Data Analyst — Tech Solutions</h3>
+                    <span class="date">2021 - Presente</span>
+                    <ul>
+                        <li>Automaticé el 65% de los reportes financieros mediante Python, ahorrando 20 horas semanales al equipo ejecutivo.</li>
+                        <li>Desarrollé un modelo predictivo de Churn que redujo la rotación de clientes en un 18% en el primer año.</li>
+                        <li>Lideré la migración de datos a un entorno cloud optimizado, reduciendo costos operativos en un 25%.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>AI Implementation Specialist — DataCorp</h3>
+                    <span class="date">2019 - 2021</span>
+                    <ul>
+                        <li>Implementé agentes de IA generativa para la clasificación de tickets, mejorando el tiempo de respuesta en un 40%.</li>
+                        <li>Diseñé Dashboards en Looker Studio para KPIs críticos, aumentando la visibilidad de datos para el 100% de los stakeholders.</li>
+                        <li>Optimicé consultas SQL complejas logrando una mejora del 50% en el rendimiento de los tiempos de carga.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects container" id="proyectos">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>NUMA</h3>
+                        <p>Plataforma de análisis de datos optimizada para flujos de trabajo dinámicos.</p>
+                        <a href="https://github.com" class="project-link">Ver Repositorio →</a>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Córdoba, Argentina
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>AI Supply Forecast</h3>
+                        <p>Predicción de inventario basada en modelos de Deep Learning.</p>
+                        <a href="#" class="project-link">Ver Caso de Estudio →</a>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        +54 | WhatsApp disponible
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn Profile
+                </div>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Sales Intelligence Hub</h3>
+                        <p>Arquitectura completa de BI para la visualización de ventas globales.</p>
+                        <a href="#" class="project-link">Explorar →</a>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Stack Section -->
+        <section class="stack container" id="stack">
+            <h2 class="section-title">Stack Técnico</h2>
+            <div class="tag-cloud">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Tableau</span>
+                <span class="tag">Looker Studio</span>
+                <span class="tag">Google AI Studio</span>
+                <span class="tag">Git</span>
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Pandas / Scikit-Learn</span>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://linkedin.com">LinkedIn</a>
+                <a href="https://github.com">GitHub</a>
+            </div>
+            <a href="https://wa.me/tu-numero" class="btn-whatsapp">Contactar vía WhatsApp</a>
+            <p class="copy">&copy; 2024 — Basado en Córdoba, Argentina.</p>
         </div>
+    </footer>
 
-        <!-- CONTENIDO -->
-        <div class="content">
-            <!-- SIDEBAR -->
-            <aside class="sidebar">
-                <div class="section">
-                    <h3 class="section-title">Habilidades Clave</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fas fa-search-dollar skill-icon"></i>
-                            <div>
-                                <strong>Prospección y desarrollo de clientes</strong><br>
-                                <small>Calificación y seguimiento de oportunidades</small>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-line skill-icon"></i>
-                            <div>
-                                <strong>Análisis de métricas comerciales</strong><br>
-                                <small>Indicadores KPI y desempeño</small>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-handshake skill-icon"></i>
-                            <div>
-                                <strong>Comunicación técnica-negocio</strong><br>
-                                <small>Soluciones técnicas a perfiles no técnicos</small>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-rocket skill-icon"></i>
-                            <div>
-                                <strong>Orientación a resultados</strong><br>
-                                <small>Autonomía y mejora continua</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="section-title" style="margin-top: 35px;">Herramientas</h3>
-                    <div class="tools-grid">
-                        <div class="tool-item"><i class="fas fa-database"></i> CRM (Zoho/Salesforce)</div>
-                        <div class="tool-item"><i class="fas fa-chart-bar"></i> PowerBI / Superset</div>
-                        <div class="tool-item"><i class="fab fa-facebook"></i> Meta Business Ads</div>
-                        <div class="tool-item"><i class="fas fa-cloud"></i> GCP / AWS</div>
-                        <div class="tool-item"><i class="fas fa-robot"></i> Prompt Engineering</div>
-                        <div class="tool-item"><i class="fas fa-mobile-alt"></i> Looker Studio</div>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- MAIN CONTENT -->
-            <main class="main-content">
-                <div class="section">
-                    <h2 class="section-title">Perfil Profesional</h2>
-                    <p style="font-size: 1.1rem; color: #4a5568; line-height: 1.8;">
-                        Profesional con experiencia en <strong>ventas, gestión comercial y análisis de datos</strong> 
-                        aplicado a la toma de decisiones. Capacidad para comprender soluciones técnicas, 
-                        traducirlas a <strong>valor de negocio</strong> y acompañar al cliente durante todo 
-                        el ciclo comercial. Enfoque en <strong>resultados, eficiencia y relaciones de largo plazo</strong>.
-                    </p>
-                </div>
-
-                <div class="section">
-                    <h2 class="section-title">Experiencia Profesional</h2>
-                    
-                    <div class="experience-item">
-                        <div class="job-title">Agente Inmobiliario Independiente</div>
-                        <div class="company"><i class="fas fa-home"></i> Bertella & Rodio – Servicios Inmobiliarios</div>
-                        <div class="period">Córdoba, Argentina | 2024 – Actualidad</div>
-                        <p class="job-desc">
-                            Gestión comercial autónoma dentro de proyecto inmobiliario propio. 
-                            Administración integral del ciclo de ventas y cartera de clientes.
-                        </p>
-                        <ul class="achievements">
-                            <li>Estrategias de captación, seguimiento de leads y negociación directa</li>
-                            <li>Enfoque en resultados, eficiencia comercial y relaciones de largo plazo</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Agente Inmobiliario</div>
-                        <div class="company"><i class="fas fa-building"></i> RE/MAX</div>
-                        <div class="period">Córdoba, Argentina | 2023 – 2024 (1 año 3 meses)</div>
-                        <p class="job-desc">
-                            Gestión integral del ciclo de ventas inmobiliarias: prospección, 
-                            entrevistas, tasaciones, presentación de propiedades y cierre.
-                        </p>
-                        <ul class="achievements">
-                            <li>Desarrollo y mantenimiento de cartera de clientes compradores/vendedores</li>
-                            <li>Trabajo bajo objetivos comerciales y esquema de comisiones</li>
-                            <li>Atención personalizada durante todo el proceso</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Analista BI</div>
-                        <div class="company"><i class="fas fa-chart-pie"></i> Consultora Dataset BI</div>
-                        <div class="period">Córdoba, Argentina | 2020 – 2023</div>
-                        <p class="job-desc">
-                            Servicios de análisis de datos para el Ministerio de Salud. 
-                            Consulta a bases de datos, ETL y desarrollo de dashboards.
-                        </p>
-                        <ul class="achievements">
-                            <li>Desarrollo de dashboards con Superset y Power BI</li>
-                            <li>Integración y análisis de datos para tableros ejecutivos</li>
-                            <li>Trabajo conjunto con áreas Comercial, Operativa y Ventas</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Docente Análisis de Datos</div>
-                        <div class="company"><i class="fas fa-chalkboard-teacher"></i> Coderhouse y Bluepatagon</div>
-                        <div class="period">Bs. As., Argentina | 2019 – Actualidad (5+ años)</div>
-                        <p class="job-desc">Dictado de cursos en análisis de datos y herramientas BI.</p>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Vendedor – Productos Lácteos</div>
-                        <div class="company"><i class="fas fa-truck"></i> Empresa Familiar</div>
-                        <div class="period">Córdoba, Argentina | 2015 – 2019</div>
-                        <p class="job-desc">Venta directa y gestión de clientes mayoristas/minoristas.</p>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="job-title">Emprendimiento Propio</div>
-                        <div class="company"><i class="fas fa-tshirt"></i> Indumentaria Deportiva</div>
-                        <div class="period">Córdoba, Argentina | 2013 – 2020</div>
-                        <p class="job-desc">
-                            Gestión integral de producción y comercialización mayorista de ropa deportiva.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2 class="section-title">Formación Académica</h2>
-                    <div class="experience-item">
-                        <div class="job-title">Técnico Universitario en Programación</div>
-                        <div class="company">Universidad Tecnológica Nacional (UTN) Córdoba</div>
-                        <div class="period">2009 – 2012</div>
-                    </div>
-                    <div class="experience-item">
-                        <div class="job-title">Diplomatura en Programación Java</div>
-                        <div class="company">Universidad Tecnológica Nacional (UTN) Córdoba</div>
-                        <div class="period">2013</div>
-                    </div>
-                    <div class="experience-item">
-                        <div class="job-title">Analista de Sistemas (parcial)</div>
-                        <div class="company">Instituto de Estudios Superiores (IES)</div>
-                        <div class="period">2006</div>
-                    </div>
-                    <div class="experience-item">
-                        <div class="job-title">Secundario Completo</div>
-                        <div class="company">Instituto
+    <script src="script.js"></script>
+</body>
+</html>
